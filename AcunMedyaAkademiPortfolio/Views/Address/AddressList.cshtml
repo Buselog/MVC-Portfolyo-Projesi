@@ -1,0 +1,53 @@
+﻿@model IEnumerable<AcunMedyaAkademiPortfolio.Models.TblAdress>
+@{
+    ViewBag.Title = "AddressList";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+
+@{ 
+    int id = 0;
+}
+
+<h4>Adres Bilgileri Sayfası</h4>
+<br />
+
+
+    <table class="table table-hover align-self-xxl-baseline">
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th>Address</th>
+                <td>@item.Adress</td>
+            </tr>
+
+
+            <tr>
+                <th>Phone</th>
+                <td>@item.Phone</td>
+            </tr>
+
+            <tr>
+                <th>Email</th>
+                <td>@item.Email</td>
+            </tr>
+
+            <tr>
+                <th>Website</th>
+                <td>@item.Website</td>
+            </tr>
+
+
+            //ikinci bir @ açmaya gerek yoktur. Zaten foreach için açtık.
+            id = item.AdressId;
+
+        }
+
+    </table>
+
+
+<br />
+<a href="/Address/UpdateAddress/@id" class="btn btn-outline-success">Bilgileri Güncelle</a>
+
+

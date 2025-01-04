@@ -1,0 +1,54 @@
+﻿@model AcunMedyaAkademiPortfolio.Models.TblTestimonial
+
+
+@{
+    ViewBag.Title = "UpdateTestimonial";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Referans Güncelleme Sayfası</h2>
+
+
+@using (Html.BeginForm("UpdateTestimonial", "Testimonial", FormMethod.Post))
+{
+
+    <div>
+
+        @*SkillId gösterimi için disabled yerine readonly kullanırsanız,
+        alanın düzenlenmesi engellenir ama form gönderildiğinde sunucuya veri gönderilir, hata alınmaz.
+        disabled olarak ayarlanan alanlar form gönderimi sırasında sunucuya aktarılmaz, bu nedenle alan null döner.
+        *@
+
+        @Html.LabelFor(a => a.TestimonialId)
+        @Html.TextBoxFor(a => a.TestimonialId, new { @class = "form-control", @readonly = "readonly" })
+
+        <br />
+
+        @Html.LabelFor(a => a.TestimonialName)
+        @Html.TextBoxFor(a => a.TestimonialName, new { @class = "form-control" })
+
+        <br />
+
+        @Html.LabelFor(a => a.TestimonialTitle)
+        @Html.TextBoxFor(a => a.TestimonialTitle, new { @class = "form-control" })
+
+        <br />
+
+        @Html.LabelFor(a => a.TestimonialDescription)
+        @Html.TextBoxFor(a => a.TestimonialDescription, new { @class = "form-control" })
+
+        <br />
+
+        @Html.LabelFor(a => a.TestimonialImageUrl)
+        @Html.TextBoxFor(a => a.TestimonialImageUrl, new { @class = "form-control" })
+
+        <br />
+
+    </div>
+
+    <div>
+        <button class="btn btn-success">Referansları Güncelle</button>
+    </div>
+
+
+}

@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+@*Linq Sorgular*@
+
+<div class="alert alert-info">Kategori Sayısı: @ViewBag.categoryCount</div>
+<div class="alert alert-danger">Proje Sayısı: @ViewBag.projectCount</div>
+<div class="alert alert-light">Yetenek Sayısı: @ViewBag.skillCount</div>
+<div class="alert alert-success">Ortalama Yetenek Puanı: @ViewBag.skillAvgValue</div>
+<div class="alert alert-primary">Son Eklenen Yetenek: @ViewBag.getLastSkillTitle</div>
+
+
+

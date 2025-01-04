@@ -1,0 +1,53 @@
+﻿@model IEnumerable<AcunMedyaAkademiPortfolio.Models.TblFeature>
+@{
+    ViewBag.Title = "FeatureList";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h5>Ana Sayfa İçeriği Bilgileri</h5>
+
+@{ 
+    int id = 0;
+}
+
+
+<table class="table table-bordered table-hover">
+
+
+    <thead>
+        <tr>
+            <th scope="col">Feature Id</th>
+            <th scope="col">Feature Title</th>
+            <th scope="col">Feature Subtitle</th>
+            <th scope="col">Feature Image URL</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td><b>@item.FeatureId</b></td>
+                <td>@item.FeatureTitle</td>
+                <td>@item.FeatureSubtitle</td>
+                <td align="center">
+                    @if (!string.IsNullOrWhiteSpace(item.FeatureImageUrl))
+                {
+                    <img src="@item.FeatureImageUrl" alt="@item.FeatureTitle Image" class="img-thumbnail" style="width:120px" />
+                }
+
+                </td>
+            </tr>
+
+            id = item.FeatureId;
+        }
+
+
+    </tbody>
+
+</table>
+
+<br />
+<a href="/Feature/UpdateFeature/@id" class="btn btn-outline-success">Ana Sayfa İçeriğini Güncelle</a>
+

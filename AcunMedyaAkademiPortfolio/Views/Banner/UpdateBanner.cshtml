@@ -1,0 +1,32 @@
+﻿@model AcunMedyaAkademiPortfolio.Models.TblBanner
+@{
+    ViewBag.Title = "UpdateBanner";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h4>Reklam Güncelleme Sayfası</h4>
+
+
+@using (Html.BeginForm("UpdateBanner", "Banner", FormMethod.Post))
+{
+    @Html.LabelFor(a => a.BannerId)
+    @Html.TextBoxFor(a => a.BannerId, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+
+    @Html.LabelFor(a => a.Title)
+    @Html.TextBoxFor(a => a.Title, new { @class = "form-control" })
+    <br />
+
+    @Html.LabelFor(a => a.Description)
+    @Html.TextAreaFor(a => a.Description, new { @class = "form-control" })
+    <br />
+
+    @Html.LabelFor(a => a.ImageUrl)
+    @Html.TextBoxFor(a => a.ImageUrl, new { @class = "form-control" })
+    <br />
+
+
+
+    <button class="btn btn-outline-success">Reklamı Kaydet</button>
+}
+

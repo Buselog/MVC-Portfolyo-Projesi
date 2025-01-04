@@ -1,0 +1,33 @@
+﻿@model AcunMedyaAkademiPortfolio.Models.TblCategory
+@{
+    ViewBag.Title = "UpdateCategory";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+@using (Html.BeginForm("UpdateCategory", "Category", FormMethod.Post))
+{
+
+    <div>
+
+
+        @Html.LabelFor(a => a.CategoryId)
+        @Html.TextBoxFor(a => a.CategoryId, new { @class = "form-control", @readonly = "readonly" })
+
+        <br />
+
+        @Html.LabelFor(a => a.CategoryName)
+        @Html.TextBoxFor(a => a.CategoryName, new { @class = "form-control" })
+
+        <br />
+
+    </div>
+
+    <div>
+        <button class="btn btn-outline-success">Kategoriyi Güncelle</button>
+    </div>
+
+
+}
+
+
+

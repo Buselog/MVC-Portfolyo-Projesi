@@ -1,0 +1,57 @@
+﻿@model List<AcunMedyaAkademiPortfolio.Models.TblSkill> 
+    @*kullanacağımız tabloyu bir liste içinde @model olarak hedef göstermeliyiz.*@
+
+    @{
+        ViewBag.Title = "SkilList";
+        Layout = "~/Views/AdminLayout/Index.cshtml";
+    }
+
+    <table class="table table-bordered">
+
+        <thead>
+
+            <tr>
+                <th>#</th>
+                <th scope="col">Başlık</th>
+                <th scope="col">Değeri</th>
+                <th scope="col">Geçen Hafa</th>
+                <th scope="col">Geçen Ay</th>
+                <th scope="col">Güncelle</th>
+                <th scope="col">Sil</th>
+
+            </tr>
+
+        </thead>
+
+
+        <tbody>
+
+            @*@Html kodları içine css kodları(backend) yazmayı sağlar*@
+
+            @foreach (var item in Model)
+            {
+                <tr>
+
+                    <td>@item.SkillId</td>
+                    <td>@item.Title</td>
+                    <td>@item.Value</td>
+                    <td>@item.LastWeekValue</td>
+                    <td>@item.LastMonthValue</td>
+                    <td><a href="/Skill/UpdateSkill/@item.SkillId" class="btn btn-warning">Güncelle</a></td>
+                    <td><a href="/Skill/DeleteSkill/@item.SkillId" class="btn btn-danger">Sil</a></td>
+
+                    @*Controller'ın ilgili ActionResult fonksiyonuna(örneğin UpdateSkill,DeleteSkill) git,
+                giderken SkillId'yi de götür ki ona göre güncellenecek, silinecek satırı bulabilsin ve işlem yapasın.*@
+
+                </tr>
+
+            }
+
+        </tbody>
+       
+
+    </table>
+
+    <a href="/Skill/CreateSkill" class="btn btn-success">Yeni yetenek ekle</a> 
+    @*SkillController->CreateSkill actionresult'a gidiyor. Tabiki httpGet başlıklı fonksiyona.*@
+

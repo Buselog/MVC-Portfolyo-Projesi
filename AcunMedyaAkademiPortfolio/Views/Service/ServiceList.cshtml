@@ -1,0 +1,58 @@
+﻿@model IEnumerable<AcunMedyaAkademiPortfolio.Models.TblService>
+
+
+@{
+    ViewBag.Title = "ServiceList";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h4>Hizmetler Listesi</h4>
+<br />
+
+<table class="table table-bordered table-hover">
+
+    <thead>
+
+        <tr>
+            <th>Service Id</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Icon Url</th>
+            <th>İşlemler</th>
+        </tr>
+
+    </thead>
+
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+
+            <tr>
+                <td><b>@item.ServicesId</b></td>
+                <td>@item.Title</td>
+                <td>@item.Description</td>
+                <td align="center">
+
+                    @if (!string.IsNullOrWhiteSpace(item.IconUrl))
+                    {
+                       <i class="fa fa-@item.IconUrl fa-2x" style="color: midnightblue"></i>
+                    }
+
+                </td>
+                <td align="center">
+
+                    <a href="/Service/UpdateService/@item.ServicesId" class="btn btn-outline-info form-text">Güncelle</a>
+                    &nbsp
+                    <a href="/Service/DeleteService/@item.ServicesId" class="btn btn-outline-danger">Sil</a>
+                </td>
+            </tr>
+        }
+
+    </tbody>
+
+</table>
+
+<br />
+
+<a href="/Service/CreateService/" class="btn btn-outline-success">Yeni Hizmet Ekle</a>

@@ -1,0 +1,25 @@
+﻿@model AcunMedyaAkademiPortfolio.Models.TblCategory
+
+@{
+    ViewBag.Title = "CreateCategory";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+
+
+@using (Html.BeginForm("CreateCategory", "Category", FormMethod.Post))
+{
+    <div>
+
+        @Html.LabelFor(a => a.CategoryName)
+        @Html.TextBoxFor(a => a.CategoryName, new { @class = "form-control" })
+
+        <br />
+
+    </div>
+
+
+    <button class="btn btn-info">Kategoriyi Kaydet</button>
+    
+}
+

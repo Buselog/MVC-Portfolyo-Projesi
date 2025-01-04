@@ -1,0 +1,28 @@
+﻿@model AcunMedyaAkademiPortfolio.Models.TblProject
+
+@{
+    ViewBag.Title = "UpdateProject";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h4>Proje Bilgilerini Güncelleme Sayfası</h4>
+
+@using (Html.BeginForm("UpdateProject", "Project", FormMethod.Post))
+{
+
+    @Html.LabelFor(a => a.ProjectId)
+    @Html.TextBoxFor(a => a.ProjectId, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    @Html.LabelFor(a => a.ProjectName)
+    @Html.TextBoxFor(a => a.ProjectName, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(a => a.ProjectImageUrl)
+    @Html.TextBoxFor(a => a.ProjectImageUrl, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(a => a.ProjectCategory)
+    @Html.DropDownListFor(a => a.ProjectCategory, (List<SelectListItem>)ViewBag.dgr, new { @class = "form-control" })
+
+    <br />
+    <button class="btn btn-outline-primary">Proje Bilgilerini Kaydet</button>
+
+}

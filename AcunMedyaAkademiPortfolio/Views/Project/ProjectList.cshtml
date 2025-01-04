@@ -1,0 +1,55 @@
+﻿@model IEnumerable<AcunMedyaAkademiPortfolio.Models.ProjectCategoryName_Result>
+@{
+    ViewBag.Title = "ProjectList";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h4>Projeler Sayfası</h4>
+
+
+<table class="table table-bordered table-hover">
+
+
+    <thead>
+        <tr>
+            <th scope="col">Project Id</th>
+            <th scope="col">Project Name</th>
+            <th scope="col">Project Category Name</th>
+            <th scope="col">Project Image URL</th>
+            <th scope="col">İşlemler</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td><b>@item.ProjectId</b></td>
+                <td>@item.ProjectName</td>
+                <td>@item.ProjectCategoryName</td>
+                <td>
+
+                    @if (!string.IsNullOrWhiteSpace(item.ProjectImageUrl))
+                {
+                    <img src="@item.ProjectImageUrl" alt="@item.ProjectName Image" class="img-thumbnail" style="width:120px" />
+                }
+
+
+                </td>
+                <td align="center">
+                    <a href="/Project/UpdateProject/@item.ProjectId" class="btn btn-outline-info d-inline-block btn-sm">Güncelle</a>
+                    &nbsp
+                    <a href="/Project/DeleteProject/@item.ProjectId" class="btn btn-outline-danger d-inline-block btn-sm">Sil</a>
+                </td>
+            </tr>
+        }
+
+
+    </tbody>
+
+</table>
+
+<br />
+<a href="/Project/CreateProject" class="btn btn-outline-success">Yeni Proje Ekle</a>
+

@@ -1,0 +1,36 @@
+﻿@*Burası bizim layout(Master Page gibi düşünülebilir) sayfamız.
+ Burada değişmeyecek, her sayfa için sabit gelecek sayfa özellikleri bulunur.*@
+
+
+@{
+    Layout = null;
+}
+
+<!doctype html>
+<html lang="en">
+
+
+@Html.Partial("~/Views/AdminLayout/HeadPartial.cshtml")
+<body>
+
+    <div class="wrapper d-flex align-items-stretch">
+        @Html.Partial("~/Views/AdminLayout/SideBarPartial.cshtml")
+
+        <!-- Page Content  -->
+        <div id="content" class="p-4 p-md-5">
+
+            @Html.Partial("~/Views/AdminLayout/NavBarPartial.cshtml")
+
+            @*Burası layout*@
+
+            @RenderBody()
+
+            @* Uygulamaya sayfada değişiklik yapacağım, değişken kısım burası demek isteniyor*@
+            @*O bireysel içerikleri, sayfaları Layout'un neresine koyacaksın ? Bunu uygulamaya @RenderBody() ile belirtmek gerekir.*@
+
+        </div>
+    </div>
+
+    @Html.Partial("~/Views/AdminLayout/ScriptPartial.cshtml")
+</body>
+</html>

@@ -1,0 +1,28 @@
+﻿@model AcunMedyaAkademiPortfolio.Models.TblFeature
+
+@{
+    ViewBag.Title = "UpdateFeature";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h5>Ana Sayfa Bilgilerini Güncelleme Sayfası</h5>
+
+@using (Html.BeginForm("UpdateFeature", "Feature", FormMethod.Post))
+{
+
+    @Html.LabelFor(a => a.FeatureId)
+    @Html.TextBoxFor(a => a.FeatureId, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    @Html.LabelFor(a => a.FeatureTitle)
+    @Html.TextBoxFor(a => a.FeatureTitle, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(a => a.FeatureSubtitle)
+    @Html.TextBoxFor(a => a.FeatureSubtitle, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(a => a.FeatureImageUrl)
+    @Html.TextBoxFor(a => a.FeatureImageUrl, new { @class = "form-control" })
+
+    <br />
+    <button class="btn btn-outline-primary">Ana Sayfa Bilgilerini Kaydet</button>
+
+}

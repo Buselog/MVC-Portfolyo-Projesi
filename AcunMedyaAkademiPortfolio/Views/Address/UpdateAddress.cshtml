@@ -1,0 +1,29 @@
+﻿@model AcunMedyaAkademiPortfolio.Models.TblAdress
+@{
+    ViewBag.Title = "UpdateAddress";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h4>Bilgileri Güncelleme Sayfası</h4>
+
+
+@using (Html.BeginForm("UpdateAddress", "Address", FormMethod.Post))
+{
+    @Html.LabelFor(a => a.AdressId)
+    @Html.TextBoxFor(a => a.AdressId, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    @Html.LabelFor(a => a.Adress)
+    @Html.TextBoxFor(a => a.Adress, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(a => a.Phone)
+    @Html.TextBoxFor(a => a.Phone, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(a => a.Email)
+    @Html.TextBoxFor(a => a.Email, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(a => a.Website)
+    @Html.TextBoxFor(a => a.Website, new { @class = "form-control" })
+    <br />
+
+    <button class="btn btn-outline-primary">Bilgileri Kaydet</button>
+}

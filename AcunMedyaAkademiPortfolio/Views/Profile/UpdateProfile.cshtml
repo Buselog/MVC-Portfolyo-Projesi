@@ -1,0 +1,55 @@
+﻿@model AcunMedyaAkademiPortfolio.Models.TblProfile
+@{
+    ViewBag.Title = "UpdateProfile";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h4>Kişisel Bilgi Güncelleme Sayfası</h4>
+
+
+@using (Html.BeginForm("UpdateProfile", "Profile", FormMethod.Post))
+{
+
+    <div>
+
+
+        @Html.LabelFor(a => a.ProfileId)
+        @Html.TextBoxFor(a => a.ProfileId, new { @class = "form-control", @readonly = "readonly" })
+
+        <br />
+
+        @Html.LabelFor(a => a.Name)
+        @Html.TextBoxFor(a => a.Name, new { @class = "form-control" })
+
+        <br />
+
+        @Html.LabelFor(a => a.Birthday)
+        @Html.TextBoxFor(a => a.Birthday, new { @class = "form-control" })
+
+        <br />
+
+        @Html.LabelFor(a => a.Address)
+        @Html.TextBoxFor(a => a.Address, new { @class = "form-control" })
+
+        <br />
+
+        @Html.LabelFor(a => a.Email)
+        @Html.TextBoxFor(a => a.Email, new { @class = "form-control" })
+
+        <br />
+
+        @Html.LabelFor(a => a.Telefon)
+        @Html.TextBoxFor(a => a.Telefon, new { @class = "form-control" })
+
+        <br />
+
+    </div>
+
+    <div>
+        <button class="btn btn-outline-success">Bilgileri Kaydet</button>
+    </div>
+
+
+}
+
+

@@ -1,0 +1,24 @@
+﻿@model AcunMedyaAkademiPortfolio.Models.TblBanner
+
+@{
+    ViewBag.Title = "CreateBanner";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h4>Yeni Reklam Oluşturma Sayfası</h4>
+
+@using (Html.BeginForm("CreateBanner", "Banner", FormMethod.Post))
+{
+    @Html.LabelFor(a => a.Title)
+    @Html.TextBoxFor(a => a.Title, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(a => a.Description)
+    @Html.TextBoxFor(a => a.Description, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(a => a.ImageUrl)
+    @Html.TextBoxFor(a => a.ImageUrl, new { @class = "form-control" })
+
+    <br />
+    <button class="btn btn-outline-primary">Yeni Reklamı Ekle</button>
+
+}

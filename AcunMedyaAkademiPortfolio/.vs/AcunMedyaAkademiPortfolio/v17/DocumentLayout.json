@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\BUSE\\source\\repos\\AcunMedyaAkademiPortfolio\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{63C04CE4-8CD8-4BF7-A769-895844311AEE}|AcunMedyaAkademiPortfolio.csproj|c:\\users\\buse\\source\\repos\\acunmedyaakademiportfolio\\views\\testimonial\\testimoniallist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{63C04CE4-8CD8-4BF7-A769-895844311AEE}|AcunMedyaAkademiPortfolio.csproj|solutionrelative:views\\testimonial\\testimoniallist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 200,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TestimonialList.cshtml",
+              "DocumentMoniker": "C:\\Users\\BUSE\\source\\repos\\AcunMedyaAkademiPortfolio\\Views\\Testimonial\\TestimonialList.cshtml",
+              "RelativeDocumentMoniker": "Views\\Testimonial\\TestimonialList.cshtml",
+              "ToolTip": "C:\\Users\\BUSE\\source\\repos\\AcunMedyaAkademiPortfolio\\Views\\Testimonial\\TestimonialList.cshtml",
+              "RelativeToolTip": "Views\\Testimonial\\TestimonialList.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-04T12:35:11.08Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

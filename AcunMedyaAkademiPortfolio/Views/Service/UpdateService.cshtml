@@ -1,0 +1,39 @@
+﻿@model AcunMedyaAkademiPortfolio.Models.TblService
+
+
+@{
+    ViewBag.Title = "UpdateService";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h4>Hizmet Güncelleme Sayfası</h4>
+<br />
+
+@using (Html.BeginForm("UpdateService", "Service", FormMethod.Post))
+{
+
+    <div>
+
+        @Html.LabelFor(a => a.ServicesId)
+        @Html.TextBoxFor(a => a.ServicesId, new { @class = "form-control", @readonly = "readonly" })
+
+        <br />
+        @Html.LabelFor(a => a.Title)
+        @Html.TextBoxFor(a => a.Title, new { @class = "form-control" })
+
+        <br />
+        @Html.LabelFor(a => a.Description)
+        @Html.TextBoxFor(a => a.Description, new { @class = "form-control" })
+
+        <br />
+        @Html.LabelFor(a => a.IconUrl)
+        @Html.TextBoxFor(a => a.IconUrl, new { @class = "form-control" })
+
+    </div>
+
+    <br />
+    <button class="btn btn-outline-primary">Hizmeti Güncelle</button>
+
+}
+
+

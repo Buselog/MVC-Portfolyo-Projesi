@@ -1,0 +1,88 @@
+﻿@model AcunMedyaAkademiPortfolio.Models.TblSkill
+
+@{
+    ViewBag.Title = "UpdateSkill";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+
+
+
+@*@Html.BeginForm Nedir?
+
+    ASP.NET MVC'de HTML formu oluşturmak için kullanılan bir Razor yardımcı (helper) metottur.
+    Bu metot, bir formun başlangıç etiketini (<form>) oluşturur ve Razor kod bloğu içinde kullanılır.
+    using yapısını kullanarak formun otomatik olarak kapatılmasını sağlar (</form>).
+
+    PARAMETRELERİ:
+    @Html.BeginForm("actionName", "controllerName", FormMethod.method)
+
+    actionName:
+    Formun gönderileceği (submit) Action metot adını belirtir.
+    Örneğin, "UpdateSkill" parametresi, SkillController'daki UpdateSkill adlı Action metoduna isteği yönlendirir.
+
+    controllerName:
+    Formun verilerini hangi Controller'a göndereceğini belirtir.
+    Burada "Skill" parametresi, SkillController'a yönlendirme yapılacağını ifade eder.
+
+    FormMethod.Post:
+    Bu action işleminin ne zaman yapılacağını belirtir.
+    (Bir POST işlemi -örneğin butona basma işlemi- olduğunda SkillController içindeki UpdateSkill actionResult'ı çalıştır')
+
+
+    @Html.LabelFor ve @Html.TextBoxFor yardımcı (helper) metotları,
+    Razor view'de form elemanlarını dinamik bir şekilde oluşturmak için kullanılır.
+
+    Ek HTML özellikleri eklemek için anonim bir nesne alabilir:
+    @Html.TextBoxFor(a => a.SkillId, new { @class = "form-control", @readonly = "readonly" })
+    bu kodun html karşılığı aslında şudur:
+    <input type="text" id="SkillId" name="SkillId" class="form-control" readonly="readonly" />
+
+
+
+*@
+
+
+@using (Html.BeginForm("UpdateSkill", "Skill", FormMethod.Post))
+{
+
+    <div>
+
+        @*SkillId gösterimi için disabled yerine readonly kullanırsanız,
+            alanın düzenlenmesi engellenir ama form gönderildiğinde sunucuya veri gönderilir, hata alınmaz.
+            disabled olarak ayarlanan alanlar form gönderimi sırasında sunucuya aktarılmaz, bu nedenle alan null döner.
+        *@
+
+        @Html.LabelFor(a => a.SkillId)
+        @Html.TextBoxFor(a => a.SkillId, new { @class = "form-control", @readonly = "readonly" })
+
+        <br />
+
+        @Html.LabelFor(a => a.Title)
+        @Html.TextBoxFor(a => a.Title, new { @class = "form-control" })
+
+        <br />
+
+        @Html.LabelFor(a => a.Value)
+        @Html.TextBoxFor(a => a.Value, new { @class = "form-control" })
+
+        <br />
+
+        @Html.LabelFor(a => a.LastWeekValue)
+        @Html.TextBoxFor(a => a.LastWeekValue, new { @class = "form-control" })
+
+        <br />
+
+        @Html.LabelFor(a => a.LastMonthValue)
+        @Html.TextBoxFor(a => a.LastMonthValue, new { @class = "form-control" })
+
+        <br />
+
+    </div>
+
+    <div>
+        <button class="btn btn-success">Yetenekleri Güncelle</button>
+    </div>
+
+}
+

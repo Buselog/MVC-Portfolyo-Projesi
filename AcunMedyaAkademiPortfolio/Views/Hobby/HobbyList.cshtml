@@ -1,0 +1,51 @@
+﻿@model IEnumerable<AcunMedyaAkademiPortfolio.Models.TblHobby>
+@{
+    ViewBag.Title = "HobbyList";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h4>Hobiler Listesi</h4>
+
+
+<table class="table table-bordered table-hover">
+
+    <thead>
+
+        <tr>
+            <th>Hobby Id</th>
+            <th>Icon</th>
+            <th>Title</th>
+            <th>İşlemler</th>
+        </tr>
+
+    </thead>
+
+    <tbody>
+
+        @foreach (var item in Model) 
+        { 
+
+            <tr>
+                <td><b>@item.HobbyId</b></td>
+                <td align="center">
+                    <i class="fa fa-@item.IconUrl fa-2x" style="color:midnightblue"></i>
+                </td>
+                <td>@item.Title</td>
+                <td align="center">
+
+                    <a href="/Hobby/UpdateHobby/@item.HobbyId" class="btn btn-outline-info">Güncelle</a>
+                    &nbsp
+                    <a href="/Hobby/DeleteHobby/@item.HobbyId" class="btn btn-outline-danger">Sil</a>
+
+                </td>
+            </tr>
+        }
+
+    </tbody>
+
+</table>
+
+<br />
+
+<a href="/Hobby/CreateHobby" class="btn btn-outline-success">Yeni Hobi Ekle</a>
+

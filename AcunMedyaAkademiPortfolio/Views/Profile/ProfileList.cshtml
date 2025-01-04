@@ -1,0 +1,65 @@
+﻿@model IEnumerable<AcunMedyaAkademiPortfolio.Models.TblProfile>
+
+@{
+    ViewBag.Title = "ProfileList";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+
+@*Razor sayfalarında bir değişkeni sayfa genelinde kullanmak için:
+
+    Razor bloğu içinde tanımlanır.
+    Razor bloğu dışında kullanılır.*@
+
+@*cshtml sayfasında Razor kodu içinde değişken tanımlamak için @ işaretini ve {} bloklarını kullanabiliriz:*@
+
+@{
+    int id = 0;  /*Bir başlangıç değeri atanması gerekir, yoksa atanmadığı için hata verir.*/
+}
+
+
+<div class="align-self-xxl-baseline">
+
+
+    <table class="table table-borderless table-hover">
+
+        @foreach (var item in Model)
+        {
+
+            <tr>
+                <th>İsim</th>
+                <td>@item.Name</td>
+            </tr>
+            <tr>
+                <th>Doğum Tarihi</th>
+                <td>@item.Birthday</td>
+            </tr>
+            <tr>
+                <th>Adres</th>
+                <td>@item.Address</td>
+            </tr>
+            <tr>
+                <th>Mail</th>
+                <td>@item.Email</td>
+            </tr>
+            <tr>
+                <th>Telefon</th>
+                <td>@item.Telefon</td>
+            </tr>
+
+            @* Atama işlemi Razor bloğu içinde yapılır *@
+
+                id = item.ProfileId;
+            
+
+        }
+
+
+    </table>
+
+    <br />
+
+    <a href="/Profile/UpdateProfile/@id" class="btn btn-outline-info">Güncelle</a>
+
+</div>
+

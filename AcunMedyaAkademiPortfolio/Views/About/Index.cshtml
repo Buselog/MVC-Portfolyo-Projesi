@@ -1,0 +1,29 @@
+﻿@model IEnumerable<AcunMedyaAkademiPortfolio.Models.TblAbout>
+
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+
+<div>
+
+    @foreach (var item in Model)
+    {
+        <div style="text-align:left">
+
+            <h2>@item.Title</h2>
+            <br />
+            <h6>@item.Description</h6>
+
+        </div>
+
+        <br />
+        <a href="/About/UpdateAbout/@item.AboutId" class="btn btn-success">Hakkımda Alanını Güncelle</a>
+
+    }
+
+</div>
+
+

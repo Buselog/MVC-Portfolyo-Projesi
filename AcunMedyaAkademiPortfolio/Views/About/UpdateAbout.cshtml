@@ -1,0 +1,42 @@
+﻿@model AcunMedyaAkademiPortfolio.Models.TblAbout
+
+
+@{
+    ViewBag.Title = "UpdateAbout";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+
+@*Form niyetine kullanılan bir html helper:*@
+
+@using (Html.BeginForm("UpdateAbout", "About", FormMethod.Post))
+{
+    <div>
+
+
+        @Html.LabelFor(a => a.AboutId)
+        @Html.TextBoxFor(a => a.AboutId, new { @class = "form-control", @readonly = "readonly" })
+
+        <br />
+
+        @Html.LabelFor(a => a.Title)
+        @Html.TextBoxFor(a => a.Title, new { @class = "form-control" }) Anonim fonksiyon yazımı
+
+        <br />
+
+        @Html.LabelFor(a => a.Description)
+        @Html.TextAreaFor(a => a.Description, new { @class = "form-control" })
+
+        <br />
+
+        @Html.LabelFor(a => a.ImageUrl)
+        @Html.TextBoxFor(a => a.ImageUrl, new { @class = "form-control" })
+
+    </div>
+
+    <br />
+
+        <button class="btn btn-success">Bilgileri Kaydet</button>
+
+}
+
