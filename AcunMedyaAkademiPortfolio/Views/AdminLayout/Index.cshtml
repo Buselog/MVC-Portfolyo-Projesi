@@ -1,8 +1,4 @@
-﻿@*Burası bizim layout(Master Page gibi düşünülebilir) sayfamız.
- Burada değişmeyecek, her sayfa için sabit gelecek sayfa özellikleri bulunur.*@
-
-
-@{
+﻿@{
     Layout = null;
 }
 
@@ -11,9 +7,11 @@
 
 
 @Html.Partial("~/Views/AdminLayout/HeadPartial.cshtml")
-<body>
 
+<body>
+    
     <div class="wrapper d-flex align-items-stretch">
+
         @Html.Partial("~/Views/AdminLayout/SideBarPartial.cshtml")
 
         <!-- Page Content  -->
@@ -21,7 +19,7 @@
 
             @Html.Partial("~/Views/AdminLayout/NavBarPartial.cshtml")
 
-            @*Burası layout*@
+           
 
             @RenderBody()
 
