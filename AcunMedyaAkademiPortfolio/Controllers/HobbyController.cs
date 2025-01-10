@@ -47,6 +47,8 @@ namespace AcunMedyaAkademiPortfolio.Controllers
         [HttpPost]
         public ActionResult UpdateHobby(TblHobby p)
         {
+            if (!ModelState.IsValid) return View("UpdateHobby");
+
             var values = db.TblHobby.Find(p.HobbyId);
             values.IconUrl = p.IconUrl;
             values.Title = p.Title;

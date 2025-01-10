@@ -105,18 +105,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="TblTestimonial">
-      <EntityTypeMapping TypeName="PortfolioModel.TblTestimonial">
-        <MappingFragment StoreEntitySet="TblTestimonial">
-          <ScalarProperty Name="TestimonialId" ColumnName="TestimonialId" />
-          <ScalarProperty Name="TestimonialName" ColumnName="TestimonialName" />
-          <ScalarProperty Name="TestimonialTitle" ColumnName="TestimonialTitle" />
-          <ScalarProperty Name="TestimonialDescription" ColumnName="TestimonialDescription" />
-          <ScalarProperty Name="TestimonialImageUrl" ColumnName="TestimonialImageUrl" />
-          <ScalarProperty Name="TestimonialStatus" ColumnName="TestimonialStatus" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <FunctionImportMapping FunctionImportName="GetLastSkillTitle" FunctionName="PortfolioModel.Store.GetLastSkillTitle" />
     <EntitySetMapping Name="TblBanner">
       <EntityTypeMapping TypeName="PortfolioModel.TblBanner">
@@ -148,5 +136,30 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="TblTestimonial">
+      <EntityTypeMapping TypeName="PortfolioModel.TblTestimonial">
+        <MappingFragment StoreEntitySet="TblTestimonial">
+          <ScalarProperty Name="TestimonialStatus" ColumnName="TestimonialStatus" />
+          <ScalarProperty Name="TestimonialImageUrl" ColumnName="TestimonialImageUrl" />
+          <ScalarProperty Name="TestimonialDescription" ColumnName="TestimonialDescription" />
+          <ScalarProperty Name="TestimonialTitle" ColumnName="TestimonialTitle" />
+          <ScalarProperty Name="TestimonialName" ColumnName="TestimonialName" />
+          <ScalarProperty Name="TestimonialId" ColumnName="TestimonialId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblSocialMedia">
+      <EntityTypeMapping TypeName="PortfolioModel.TblSocialMedia">
+        <MappingFragment StoreEntitySet="TblSocialMedia">
+          <ScalarProperty Name="SocialMediaUrl" ColumnName="SocialMediaUrl" />
+          <ScalarProperty Name="SocialMediaIcon" ColumnName="SocialMediaIcon" />
+          <ScalarProperty Name="SocialMediaName" ColumnName="SocialMediaName" />
+          <ScalarProperty Name="SocialMediaId" ColumnName="SocialMediaId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="GetLastProjectName" FunctionName="PortfolioModel.Store.GetLastProjectName" />
+    <FunctionImportMapping FunctionImportName="GetLastSocialMediaName" FunctionName="PortfolioModel.Store.GetLastSocialMediaName" />
+    <FunctionImportMapping FunctionImportName="GetLastTestimonialName" FunctionName="PortfolioModel.Store.GetLastTestimonialName" />
   </EntityContainerMapping>
 </Mapping>

@@ -1,0 +1,46 @@
+﻿@model AcunMedyaAkademiPortfolio.Models.TblContact
+
+
+<div class="col-md-8">
+
+
+    @using (Html.BeginForm("PartialContact", "Default", FormMethod.Post, new { @class = "bg-light p-4 p-md-5 contact-form" }))
+    {
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    @*<input type="text" class="form-control" placeholder="Your Name" id="ContactName">*@
+                    @Html.TextBoxFor(a => a.ContactName, new { @class = "form-control", placeholder = "Adınızı girin" })
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    @*<input type="text" class="form-control" placeholder="Your Email" id="ContactEmail">*@
+                    @Html.TextBoxFor(a => a.ContactEmail, new { @class = "form-control", placeholder = "Mailinizi girin" })
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group">
+                    @*<input type="text" class="form-control" placeholder="Subject" id="ContactSubject">*@
+                    @Html.TextBoxFor(a => a.ContactSubject, new { @class = "form-control", placeholder = "Konu" })
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group">
+                    @*<textarea name="" id="ContactDescription" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>*@
+                    @Html.TextAreaFor(a => a.ContactDescription, new { @class = "form-control", cols = "30", rows = "7", placeholder = "Mesaj" })
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <button class="btn btn-primary py-3 px-5">Mesajı Gönder</button>
+
+                </div>
+            </div>
+        </div>
+
+
+    }
+
+</div>

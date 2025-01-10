@@ -26,11 +26,19 @@
 
         @Html.LabelFor(a => a.TestimonialName)
         @Html.TextBoxFor(a => a.TestimonialName, new { @class = "form-control" })
+        @Html.ValidationMessageFor(a => a.TestimonialName, "", new { @class = "text-danger" }) @* "" -> default hata mesajı, sayfayı ilk açtığında TextBox altında gözükür*@
+
+
+        @*Model, Validation kurallarına göre belirlenen hata mesajlarını görüntülemek için kullanılır.*@
 
         <br />
 
         @Html.LabelFor(a => a.TestimonialTitle)
         @Html.TextBoxFor(a => a.TestimonialTitle, new { @class = "form-control" })
+        @Html.ValidationMessageFor(a => a.TestimonialTitle, "", new { @class = "text-danger" })
+        @*Model, Validation kurallarına göre belirlenen hata mesajlarını görüntülemek için kullanılır.*@
+
+
 
         <br />
 

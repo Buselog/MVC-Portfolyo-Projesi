@@ -63,7 +63,7 @@
     <Property Name="FeatureId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="FeatureTitle" Type="varchar" MaxLength="50" />
     <Property Name="FeatureSubtitle" Type="varchar" MaxLength="30" />
-    <Property Name="FeatureImageUrl" Type="varchar" MaxLength="150" />
+    <Property Name="FeatureImageUrl" Type="varchar" MaxLength="200" />
   </EntityType>
   <EntityType Name="TblHobby">
     <Key>
@@ -99,8 +99,8 @@
     </Key>
     <Property Name="ServicesId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Title" Type="varchar" MaxLength="30" />
-    <Property Name="Description" Type="varchar" MaxLength="50" />
-    <Property Name="IconUrl" Type="varchar" MaxLength="150" />
+    <Property Name="Description" Type="varchar" MaxLength="100" />
+    <Property Name="IconUrl" Type="varchar" MaxLength="200" />
   </EntityType>
   <EntityType Name="TblSkill">
     <Key>
@@ -112,6 +112,15 @@
     <Property Name="LastWeekValue" Type="tinyint" />
     <Property Name="LastMonthValue" Type="tinyint" />
   </EntityType>
+  <EntityType Name="TblSocialMedia">
+    <Key>
+      <PropertyRef Name="SocialMediaId" />
+    </Key>
+    <Property Name="SocialMediaId" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SocialMediaName" Type="varchar" MaxLength="20" />
+    <Property Name="SocialMediaIcon" Type="varchar" MaxLength="40" />
+    <Property Name="SocialMediaUrl" Type="varchar" MaxLength="150" />
+  </EntityType>
   <EntityType Name="TblTestimonial">
     <Key>
       <PropertyRef Name="TestimonialId" />
@@ -119,8 +128,8 @@
     <Property Name="TestimonialId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="TestimonialName" Type="varchar" MaxLength="50" />
     <Property Name="TestimonialTitle" Type="varchar" MaxLength="50" />
-    <Property Name="TestimonialDescription" Type="varchar" MaxLength="120" />
-    <Property Name="TestimonialImageUrl" Type="varchar" MaxLength="150" />
+    <Property Name="TestimonialDescription" Type="varchar" MaxLength="500" />
+    <Property Name="TestimonialImageUrl" Type="varchar" MaxLength="250" />
     <Property Name="TestimonialStatus" Type="bit" />
   </EntityType>
   <Association Name="FK_TblProject_TblCategory">
@@ -135,7 +144,10 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Function Name="GetLastProjectName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <Function Name="GetLastSkillTitle" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GetLastSocialMediaName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GetLastTestimonialName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <Function Name="ProjectCategoryName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <EntityContainer Name="PortfolioModelStoreContainer">
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
@@ -150,6 +162,7 @@
     <EntitySet Name="TblProject" EntityType="Self.TblProject" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TblService" EntityType="Self.TblService" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TblSkill" EntityType="Self.TblSkill" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblSocialMedia" EntityType="Self.TblSocialMedia" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TblTestimonial" EntityType="Self.TblTestimonial" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK_TblProject_TblCategory" Association="Self.FK_TblProject_TblCategory">
       <End Role="TblCategory" EntitySet="TblCategory" />

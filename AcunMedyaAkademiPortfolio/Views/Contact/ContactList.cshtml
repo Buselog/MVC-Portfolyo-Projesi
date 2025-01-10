@@ -1,0 +1,40 @@
+﻿@model IEnumerable<AcunMedyaAkademiPortfolio.Models.TblContact>
+@{
+    ViewBag.Title = "ContactList";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Gelen Mesajlar</h2>
+
+<table class="table table-bordered table-hover">
+
+    <thead>
+
+        <tr>
+            <th>Contact Id</th>
+            <th>Contact Name</th>
+            <th>Contact Email</th>
+            <th>Contact Subject</th>
+            <th>Contact Description</th>
+        </tr>
+
+    </thead>
+
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+
+            <tr>
+                <td><b>@item.ContactId</b></td>
+                <td>@item.ContactName</td>
+                <td>@item.ContactEmail</td>
+                <td>@item.ContactSubject</td>
+                <td>@item.ContactDescription</td>
+            </tr>
+        }
+
+    </tbody>
+
+</table>
+

@@ -1,0 +1,39 @@
+﻿@model AcunMedyaAkademiPortfolio.Models.TblSocialMedia
+
+@{
+    ViewBag.Title = "UpdateSocialMedia";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h4>Sosyal Medya Güncelleme Sayfası</h4>
+<br />
+
+@using (Html.BeginForm("UpdateSocialMedia", "SocialMedia", FormMethod.Post))
+{
+
+    <div>
+
+        @Html.LabelFor(a => a.SocialMediaId)
+        @Html.TextBoxFor(a => a.SocialMediaId, new { @class = "form-control", @readonly = "readonly" })
+
+        <br />
+        @Html.LabelFor(a => a.SocialMediaName)
+        @Html.TextBoxFor(a => a.SocialMediaName, new { @class = "form-control" })
+
+        <br />
+        @Html.LabelFor(a => a.SocialMediaIcon)
+        @Html.TextBoxFor(a => a.SocialMediaIcon, new { @class = "form-control" })
+        @*@Html.ValidationMessageFor(a => a.Title, "", new { @class = "text-danger" })*@
+        @*Model, Validation kurallarına göre belirlenen hata mesajlarını görüntülemek için kullanılır.*@
+        <br />
+        @Html.LabelFor(a => a.SocialMediaUrl)
+        @Html.TextBoxFor(a => a.SocialMediaUrl, new { @class = "form-control" })
+
+
+    </div>
+
+    <br />
+    <button class="btn btn-outline-primary">Sosyal Medyayı Güncelle</button>
+
+}
+

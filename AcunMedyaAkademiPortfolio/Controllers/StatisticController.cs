@@ -19,6 +19,13 @@ namespace AcunMedyaAkademiPortfolio.Controllers
             ViewBag.skillCount = db.TblSkill.Count();
             ViewBag.skillAvgValue = db.TblSkill.Average(x=>x.Value);
             ViewBag.getLastSkillTitle = db.GetLastSkillTitle().FirstOrDefault();
+            ViewBag.SocialMediaCount = db.TblSocialMedia.Count();
+            ViewBag.HobbyCount = db.TblHobby.Count();
+            ViewBag.GetLatProjectName = db.GetLastProjectName().FirstOrDefault();
+            ViewBag.GetLastSocialMediaName = db.GetLastSocialMediaName().FirstOrDefault();
+            ViewBag.GetLastTestimonialName = db.GetLastTestimonialName().FirstOrDefault();
+            
+
             
             return View();
         }

@@ -5,34 +5,35 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 :root {
-  --blue: #007bff;
-  --indigo: #6610f2;
-  --purple: #6f42c1;
-  --pink: #e83e8c;
-  --red: #dc3545;
-  --orange: #fd7e14;
-  --yellow: #ffc107;
-  --green: #28a745;
-  --teal: #20c997;
-  --cyan: #17a2b8;
-  --white: #fff;
-  --gray: #6c757d;
-  --gray-dark: #343a40;
-  --primary: #007bff;
-  --secondary: #6c757d;
-  --success: #28a745;
-  --info: #17a2b8;
-  --warning: #ffc107;
-  --danger: #dc3545;
-  --light: #f8f9fa;
-  --dark: #343a40;
-  --breakpoint-xs: 0;
-  --breakpoint-sm: 576px;
-  --breakpoint-md: 768px;
-  --breakpoint-lg: 992px;
-  --breakpoint-xl: 1200px;
-  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+    --blue: #1e7482; /*#007bff*/
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #B53471;
+    --secondary: #6F1E51;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
 
 *,
 *::before,
@@ -134,12 +135,14 @@ sup {
   top: -.5em; }
 
 a {
-  color: #007bff;
-  text-decoration: none;
-  background-color: transparent; }
-  a:hover {
-    color: #0056b3;
-    text-decoration: underline; }
+    color: #1e7482; /*#007bff*/
+    text-decoration: none;
+    background-color: transparent;
+}
+    a:hover {
+        color: #1e7482; /*#0056b3*/
+        text-decoration: underline;
+    }
 
 a:not([href]):not([tabindex]) {
   color: inherit;
@@ -8191,7 +8194,7 @@ h1, h2, h3, h4, h5,
 
 .navbar {
   padding: 15px 10px;
-  background: #fff;
+  background: black;
   border: none;
   border-radius: 0;
   margin-bottom: 40px;
@@ -8214,13 +8217,14 @@ h1, h2, h3, h4, h5,
   width: 100%; }
 
 #sidebar {
-  min-width: 270px;
-  max-width: 270px;
-  background: #3e64ff;
-  color: #fff;
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s; }
+    min-width: 270px;
+    max-width: 270px;
+    background: #6F1E51;
+    color: #fff;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
   #sidebar.active {
     min-width: 80px;
     max-width: 80px;

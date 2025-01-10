@@ -1,0 +1,12 @@
+﻿@model IEnumerable<AcunMedyaAkademiPortfolio.Models.TblHobby>
+
+@foreach (var item in Model)
+{
+    <div class="interest-wrap d-flex align-items-center">
+        <div class="icon d-flex align-items-center justify-content-center">
+            <i class="fa fa-@item.IconUrl" style="color:whitesmoke"></i>
+            @*<span class="flaticon-@item.IconUrl"></span>*@
+        </div>
+        <div class="text">@item.Title  </div>
+    </div>
+}

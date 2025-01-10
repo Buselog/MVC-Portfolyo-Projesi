@@ -1,0 +1,34 @@
+﻿@model AcunMedyaAkademiPortfolio.Models.TblSocialMedia
+@{
+    ViewBag.Title = "CreateSocialMedia";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+
+<h4>Yeni Sosyal Medya Ekleme Sayfası</h4>
+<br />
+
+@using (Html.BeginForm("CreateSocialMedia", "SocialMedia", FormMethod.Post))
+{
+
+    <div>
+
+        @Html.LabelFor(a => a.SocialMediaName)
+        @Html.TextBoxFor(a => a.SocialMediaName, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(a => a.SocialMediaIcon)
+        @Html.TextBoxFor(a => a.SocialMediaIcon, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(a => a.SocialMediaUrl)
+        @Html.TextBoxFor(a => a.SocialMediaUrl, new { @class = "form-control" })
+
+    </div>
+
+    <br />
+
+    <button class="btn btn-success">Sosyal Medyayı Ekle</button>
+
+}
+
+
+

@@ -37,9 +37,10 @@ namespace AcunMedyaAkademiPortfolio.Models
         public virtual DbSet<TblProject> TblProject { get; set; }
         public virtual DbSet<TblService> TblService { get; set; }
         public virtual DbSet<TblSkill> TblSkill { get; set; }
-        public virtual DbSet<TblTestimonial> TblTestimonial { get; set; }
         public virtual DbSet<TblBanner> TblBanner { get; set; }
         public virtual DbSet<TblFeature> TblFeature { get; set; }
+        public virtual DbSet<TblTestimonial> TblTestimonial { get; set; }
+        public virtual DbSet<TblSocialMedia> TblSocialMedia { get; set; }
     
         public virtual ObjectResult<string> GetLastSkillTitle()
         {
@@ -49,6 +50,21 @@ namespace AcunMedyaAkademiPortfolio.Models
         public virtual ObjectResult<ProjectCategoryName_Result> ProjectCategoryName()
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ProjectCategoryName_Result>("ProjectCategoryName");
+        }
+    
+        public virtual ObjectResult<string> GetLastProjectName()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("GetLastProjectName");
+        }
+    
+        public virtual ObjectResult<string> GetLastSocialMediaName()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("GetLastSocialMediaName");
+        }
+    
+        public virtual ObjectResult<string> GetLastTestimonialName()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("GetLastTestimonialName");
         }
     }
 }

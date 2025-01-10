@@ -25,6 +25,7 @@ namespace AcunMedyaAkademiPortfolio.Controllers
         [HttpPost]
         public ActionResult CreateTestimonial(TblTestimonial p)
         {
+
             db.TblTestimonial.Add(p);
             db.SaveChanges();
             return RedirectToAction("TestimonialList");
@@ -49,10 +50,12 @@ namespace AcunMedyaAkademiPortfolio.Controllers
         [HttpPost]
         public ActionResult UpdateTestimonial(TblTestimonial p)
         {
+            if (!ModelState.IsValid) return View("UpdateTestimonial");
+          
             var value = db.TblTestimonial.Find(p.TestimonialId);
+            value.TestimonialName = p.TestimonialName;
             value.TestimonialTitle = p.TestimonialTitle;
             value.TestimonialDescription = p.TestimonialDescription;
-            value.TestimonialName = p.TestimonialName;
             value.TestimonialImageUrl = p.TestimonialImageUrl;
             db.SaveChanges();
             return RedirectToAction("TestimonialList");

@@ -24,6 +24,8 @@
         <br />
         @Html.LabelFor(a => a.Title)
         @Html.TextBoxFor(a => a.Title, new { @class = "form-control" })
+        @Html.ValidationMessageFor(a => a.Title, "", new { @class = "text-danger" })
+        @*Model, Validation kurallarına göre belirlenen hata mesajlarını görüntülemek için kullanılır.*@
 
     </div>
 
