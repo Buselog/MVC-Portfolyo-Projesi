@@ -40,7 +40,7 @@ Admin paneli tarafında sitede görünmesi istenen tüm veriler için ekleme, si
 
 
 
-#### Ana Sayfa
+#### ● Ana Sayfa
 
 
 
@@ -48,32 +48,32 @@ Admin paneli tarafında sitede görünmesi istenen tüm veriler için ekleme, si
 
 
 
-#### Hakkımda 
+#### ● Hakkımda 
 
 
 <img src="https://github.com/user-attachments/assets/10cf05cb-76ae-4582-b940-7380a9d81184" width="800">
 
 
 
-#### Yetenekler - Bilinen Programlama Dilleri
+#### ● Yetenekler - Bilinen Programlama Dilleri
 
 
 <img src="https://github.com/user-attachments/assets/8531a152-1b0b-4438-b455-38f3fd2714f8" width="800">
 
 
-#### Sağlanan Hizmetler
+#### ● Sağlanan Hizmetler
 
 
 <img src="https://github.com/user-attachments/assets/c6d45126-5ff8-4f3b-9a61-83176a6177bc" width="800">
 
 
-#### Referanslar 
+#### ● Referanslar 
 
 
 <img src="https://github.com/user-attachments/assets/cadd595c-85fb-4e10-9aff-07e6fe71d67e" width="800">
 
 
-#### İletişim 
+#### ● İletişim 
 
 <img src="https://github.com/user-attachments/assets/24eec784-7544-4a71-b92f-acabbb4409a9" width="800">
 
@@ -83,31 +83,31 @@ Admin paneli tarafında sitede görünmesi istenen tüm veriler için ekleme, si
 ### ⭐️ Admin Paneli Tarafı (Ekleme, Silme Güncelleme İşlemleri ve Kayıtlı Verilerin Okunması)
 
 
-#### Projeler 
+#### ● Projeler 
 
 
 <img src="https://github.com/user-attachments/assets/06dd383b-6ba1-4ac4-bd5f-9d4b4b02bc70" width="800">
 
 
-#### Hizmetler 
+#### ● Hizmetler 
 
 
 <img src="https://github.com/user-attachments/assets/503bb183-1c26-4115-a3bb-329b3d7516fc" width="800">
 
 
-#### Referanslar
+#### ● Referanslar
 
 
 <img src="https://github.com/user-attachments/assets/f7ad1b9e-ac6f-48a5-8e85-7348c1f7ebdc" width="800">
 
 
-#### Ulaşılabilir Sosyal Medya Platformları 
+#### ● Ulaşılabilir Sosyal Medya Platformları 
 
 
 <img src="https://github.com/user-attachments/assets/3987db7e-c0c6-486b-b32c-184a47de929b" width="800">
 
 
-#### Eklenen Hobiler
+#### ● Eklenen Hobiler
 
 
 <img src="https://github.com/user-attachments/assets/a54b5576-ea74-4a3f-a3b3-6b9d06eb0a0d" width="800">
